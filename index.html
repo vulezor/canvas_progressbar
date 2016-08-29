@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script type="text/javascript"   src="jquery-mdz-progressbar.js"   ></script>
+</head>
+<body>
+	<canvas id="myCanvas" class="myCanvas" width="100px" >Your browser does not support the HTML5 canvas tag.</canvas>
+	<div><canvas id="myCanvas1" class="myCanvas" width="200px" >Your browser does not support the HTML5 canvas tag.</canvas>
+	<button type="button" id="left">left</button><button type="button" id="right">right</button>
+	</div>
+	<canvas id="myCanvas2" class="myCanvas" width="300px" >Your browser does not support the HTML5 canvas tag.</canvas>
+	<canvas id="myCanvas3" class="myCanvas" width="200px" >Your browser does not support the HTML5 canvas tag.</canvas>
+	<canvas id="myCanvas4" class="myCanvas" width="300px" >Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+
+$('#myCanvas').mdz_progressbar({
+	percent: 70,
+  	fillColor: "#FFFFFF",
+  	staticStrokeColor:"#FFFFFF",
+  	dynamicStrokeColor:"#62a8da",
+  	fontColor:"#000000",
+  	fontStyle:"Comic Sans MS",
+  	textShadow:false
+});
+
+var c1 = $('#myCanvas1').mdz_progressbar({
+	percent:40
+});
+
+var intervalId;
+$('#left, #right').mousedown(function() {
+  intervalId = setInterval(do_something.bind(this), 40);
+}).mouseup(function() {
+  clearInterval(intervalId);
+}).mouseleave(function() {
+  clearInterval(intervalId);
+});
+
+function do_something(){
+	var value = c1.data('plugin_mdz_progressbar').options.percent;
+	if($(this)[0].id==='left'){
+		value--
+		c1.data('plugin_mdz_progressbar').addValue(value);
+	} else {
+		value++
+		c1.data('plugin_mdz_progressbar').addValue(value);
+	}
+};
+
+
+$('#myCanvas2').mdz_progressbar({
+	percent: 90,
+  	fillColor: "#FFFFFF",
+  	staticStrokeColor:"#DFDFDF",
+  	dynamicStrokeColor:"#e5483f",
+  	fontColor:"#e5483f",
+  	textShadow:false
+});
+/*$('#myCanvas3').mdz_loadbar({percent:40});
+$('#myCanvas4').mdz_loadbar({percent:50});
+$('#myCanvas5').mdz_loadbar({percent:60});*/
+</script>	
+</body>
+
+
+</html>
