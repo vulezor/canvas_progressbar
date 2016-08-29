@@ -4,7 +4,7 @@ This is jquery plugin of progress bar. For now we have one configurable view thr
 After include plugin into page, you can create canvas. 
 Give them class or id and just initialize plugin name after selector like on code below.
 
-$('selector_name').mdz_progressbar()
+$('#selector_name').mdz_progressbar()
 
 You can override some option to configure your style of mdz_progressbar. Expectation is write like json object below which is default by the way and you can override the rules of that style. 
 {
@@ -17,4 +17,12 @@ You can override some option to configure your style of mdz_progressbar. Expecta
      fontStyle:"Arial"
 }
 
+Tip:
+If you declare your initial function like on example below
+
+var canvas1 = $('#selector_name').mdz_progressbar()
+
+In code you can update and animate your result like on call method below.
+
+canvas1.data('plugin_mdz_progressbar').addValue(80);
 
