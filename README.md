@@ -27,4 +27,6 @@ In code you can update and animate your result like on call method below.
 ```javascript
 canvas1.data('plugin_mdz_progressbar').addValue(80);
 ```
+
+# Screenshot
 ![2016-08-29_055156](https://cloud.githubusercontent.com/assets/3845100/18040323/c8aceb56-6dac-11e6-920b-00e567ec9987.png)
