@@ -29,4 +29,5 @@ canvas1.data('plugin_mdz_progressbar').addValue(80);
 ```
 
 # Screenshot
-![2016-08-29_055156](https://cloud.githubusercontent.com/assets/3845100/18040323/c8aceb56-6dac-11e6-920b-00e567ec9987.png)
+![2016-08-29_055156](https://cloud.githubusercontent.com/assets/3845100/18040704/35b74e5e-6db1-11e6-81dc-4cfec0f383e9.png)
+
