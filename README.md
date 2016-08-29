@@ -7,6 +7,7 @@ Give them class or id and just initialize plugin name after selector like on cod
 $('#selector_name').mdz_progressbar()
 
 You can override some option to configure your style of mdz_progressbar. Expectation is write like json object below which is default by the way and you can override the rules of that style. 
+```javascript
 {
      percent: 0,
      fillColor: '#34495e',
@@ -16,7 +17,7 @@ You can override some option to configure your style of mdz_progressbar. Expecta
      textShadow:true,
      fontStyle:"Arial"
 }
-
+```
 Tip:
 If you declare your initial function like on example below
 
